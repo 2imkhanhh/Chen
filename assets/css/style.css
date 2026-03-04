@@ -324,30 +324,34 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 80px; /* Bạn giảm từ 50px xuống 30px để kéo chúng lại gần nhau hơn nhé */
+    justify-content: center; /* Gom cả khối ảnh và chữ vào giữa màn hình */
+    
+    /* 👇 ĐIỀU CHỈNH KHOẢNG CÁCH BẰNG PX Ở ĐÂY 👇 */
+    gap: 80px; /* Tăng số này lên nếu muốn ảnh và chữ xa nhau hơn */
+    
     box-sizing: border-box;
 }
 
 /* Phần ảnh bên trái */
 .review-image {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end; /* Lệnh quan trọng: Đẩy ảnh sang bám sát vào lề phải (gần chữ) */
+    /* Đã xóa flex: 1 và các lệnh đẩy phải ở đây để nó không tự động phình to nữa */
+    display: block; 
 }
 
 .review-image img {
-    width: 70%; /* Bạn có thể tăng giảm phần trăm này để chỉnh độ to nhỏ của ảnh */
-    aspect-ratio: 1 / 1; 
+    /* 👇 ĐIỀU CHỈNH ĐỘ TO CỦA ẢNH BẰNG PX Ở ĐÂY 👇 */
+    width: 380px; 
+    height: 380px; /* Đặt chiều cao bằng chiều rộng để ảnh luôn vuông */
     object-fit: cover;
     display: block;
 }
 
 /* Phần chữ bên phải */
 .review-content {
-    flex: 1;
-    text-align: left; /* Căn lề trái cho cụm chữ */
+    flex: 1; /* Vẫn cho phần chữ co giãn chiếm nốt khoảng trống */
+    max-width: 500px; /* KHÓA độ rộng của khối chữ lại để chữ không bị kéo dài ngoằng sang mép phải */
+    text-align: left; 
 }
-
 .client-name {
     font-family: 'Anybody', sans-serif;
     color: #007B52; /* Xanh lá đậm */
@@ -451,4 +455,224 @@ body {
     background-color: #F0AD00;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(240, 173, 0, 0.4);
+}
+
+.contact-section {
+    width: 100%;
+    background-color: #FCFAF2;
+}
+
+.contact-container {
+    display: flex;
+    align-items: stretch; /* Đảm bảo 2 bên cao bằng nhau */
+    width: 100%;
+}
+
+/* Bên trái: Form */
+.contact-form-side {
+    flex: 1;
+    padding: 80px 5% 80px 10%; /* Căn lề trái sâu hơn để cân đối */
+    text-align: left;
+}
+
+.contact-title {
+    font-family: 'Rubik Dirt', system-ui;
+    color: #F0AD00;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.contact-desc {
+    color: #2C5217;
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 500;
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+/* Form Layout */
+.contact-form {
+    max-width: 600px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    color: #2C5217;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.form-group input, 
+.form-group textarea {
+    background-color: transparent;
+    border: 1px solid #007B52;
+    padding: 10px 15px;
+    font-family: 'Anybody', sans-serif;
+    color: #2C5217;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: none;
+    min-height: 45px;
+}
+
+/* Nút Send */
+.form-submit {
+    display: flex;
+    justify-content: flex-end; /* Đẩy nút sang phải theo thiết kế */
+    margin-top: 10px;
+}
+
+.send-btn {
+    background-color: #F8C301;
+    color: #007B52;
+    border: none;
+    padding: 12px 60px;
+    font-family: 'Anybody', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.send-btn:hover {
+    background-color: #F0AD00;
+    transform: translateY(-2px);
+}
+
+/* Bên phải: Ảnh tràn lề */
+.contact-image-side {
+    flex: 1;
+}
+
+.contact-image-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ảnh phủ kín nửa màn hình */
+    display: block;
+}
+
+.main-footer {
+    background-color: #007B52;
+    color: #FFFFFF;
+    padding: 60px 0 20px 0;
+    font-family: 'Anybody', sans-serif;
+}
+
+.footer-container {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+/* Cột 1: Logo & Social */
+.footer-logo {
+    width: 150px;
+    margin-bottom: 30px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) saturate(100%) invert(86%) sepia(29%) saturate(4605%) hue-rotate(338deg) brightness(101%) contrast(98%); /* Chuyển icon sang màu vàng #FCBE20 nếu là ảnh đen */
+}
+
+/* Tiêu đề chung */
+.footer-heading {
+    color: #FCBE20;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    text-transform: none;
+}
+
+/* Cột 2: Info */
+.info-item {
+    display: flex;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.info-label {
+    color: #FCBE20;
+    font-weight: 800;
+    min-width: 60px;
+    flex-shrink: 0;
+}
+
+/* Cột 3: Hours */
+.hour-item {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.hour-item .time {
+    font-weight: 400;
+}
+
+.footer-column.footer-map {
+    flex: 1.5; 
+    display: flex;
+    align-items: stretch; /* Đảm bảo cột map luôn giãn hết chiều cao hàng */
+}
+
+.map-container {
+    width: 100%;
+    /* Bạn có thể tăng số 400px này lên nữa nếu muốn cao hơn nữa */
+    min-height: 250px; 
+    height: 100%; 
+    overflow: hidden;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+/* Copyright */
+.footer-bottom {
+    max-width: 80%; /* Bằng với max-width của footer-container */
+    margin: 60px auto 0 auto; /* Căn giữa để khớp với phần trên */
+    border-top: 1px solid #FFFCF6; /* Đường kẻ trắng/vàng nhạt */
+    padding: 20px 20px 0 20px; /* Padding để text không dính lề */
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-family: 'Poppins', sans-serif; /* Đổi sang font Poppins */
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
 }
