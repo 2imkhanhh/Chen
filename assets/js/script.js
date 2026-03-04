@@ -7,3 +7,27 @@ window.addEventListener('scroll', () => {
         header.classList.remove('scrolled');
     }
 });
+
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+if (hamburgerBtn && mobileMenuOverlay) {
+    hamburgerBtn.addEventListener('click', () => {
+        mobileMenuOverlay.classList.add('open');
+        document.body.style.overflow = 'hidden'; // Chặn scroll khi menu mở
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+        mobileMenuOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+    });
+
+    // Nhấn vào link thì đóng menu
+    mobileMenuOverlay.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+    });
+}
