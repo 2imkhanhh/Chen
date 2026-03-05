@@ -1,0 +1,210 @@
+.catering-section {
+    width: 100%;
+    padding: 60px 20px 100px 20px;
+    text-align: center;
+}
+
+/* Tiêu đề Grunge màu vàng */
+.catering-title {
+    font-family: 'Rubik Dirt', system-ui;
+    color: #F0AD00;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 6px; /* Giãn cách chữ rộng ra giống thiết kế */
+    margin-bottom: 40px;
+}
+
+/* Khung chứa ảnh */
+.catering-image {
+    width: 30%; 
+    margin: 0 auto 50px auto; 
+}
+
+.catering-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+}
+
+.catering-content {
+    max-width: 50%; 
+    margin: 0 auto;
+}
+
+.catering-content p {
+    font-family: 'Anybody', sans-serif;
+    color: #2C5217; 
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 2.2;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Link tải menu gạch chân */
+.download-link {
+    color: #2C5217; 
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.download-link:hover {
+    color: #FCBE20; 
+}
+
+/* Nút bấm */
+.catering-action {
+    margin-top: 40px;
+}
+
+.catering-btn {
+    display: inline-block;
+    background-color: #F8C301; /* Vàng cam */
+    color: #007B52; /* Xanh lá đậm */
+    font-family: 'Anybody', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 15px 60px;
+    transition: all 0.3s ease;
+}
+
+.catering-btn:hover {
+    background-color: #F0AD00;
+    transform: translateY(-3px); /* Hiệu ứng nảy lên */
+    box-shadow: 0 5px 15px rgba(240, 173, 0, 0.4);
+}
+
+.catering-form-container {
+    max-width: 750px;
+    margin: 80px auto 0; /* Cách phần nút Menu ở trên 80px */
+    text-align: left; /* Ép toàn bộ chữ trong form căn lề trái */
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+/* Các tiêu đề chính của trường nhập liệu */
+.main-label {
+    display: block;
+    font-family: 'Anybody', sans-serif;
+    color: #2C5217;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.required {
+    font-size: 13px;
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+/* Chữ mô tả phụ và nhãn phụ */
+.field-desc, .sub-label {
+    font-family: 'Anybody', sans-serif;
+    color: #5c6a55;
+    font-size: 12px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Chia đôi cột cho tên */
+.name-inputs {
+    display: flex;
+    gap: 20px; /* Khoảng cách giữa First name và Last name */
+}
+
+.input-wrapper {
+    flex: 1; /* Mỗi ô chia đều 50% */
+}
+
+/* --- ĐỊNH DẠNG Ô NHẬP LIỆU CHUNG --- */
+.catering-form input[type="text"],
+.catering-form input[type="email"],
+.catering-form input[type="tel"],
+.catering-form input[type="date"],
+.catering-form select,
+.catering-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #A3B899; /* Viền màu xanh lá nhạt giống thiết kế */
+    background-color: #ffffff; /* Nền trắng */
+    font-family: 'Anybody', sans-serif;
+    font-size: 14px;
+    color: #2C5217;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+/* Hiệu ứng khi bấm vào ô nhập liệu */
+.catering-form input:focus,
+.catering-form select:focus,
+.catering-form textarea:focus {
+    border-color: #007B52; /* Viền đậm lên khi đang gõ */
+}
+
+.catering-form textarea {
+    resize: vertical; /* Chỉ cho phép kéo giãn chiều dọc */
+}
+
+.catering-form input::placeholder,
+.catering-form textarea::placeholder {
+    color: #a8bba7;
+}
+
+/* --- NÚT BẤM SUBMIT --- */
+.form-submit-left {
+    margin-top: 40px;
+    text-align: left; /* Canh nút bấm sang trái */
+}
+
+.submit-btn {
+    background-color: #F8C301;
+    color: #007B52;
+    font-family: 'Anybody', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    border: none;
+    padding: 12px 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #F0AD00;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(240, 173, 0, 0.4);
+}
+
+/* --- RESPONSIVE CHO MÀN HÌNH NHỎ --- */
+@media (max-width: 768px) {
+    .catering-section {
+        padding: 20px;
+    }
+    .catering-image {
+        width: 80%; 
+    }
+    .catering-title {
+        font-size: 28px;
+        letter-spacing: 4px;
+    }
+    .catering-content {
+        max-width: 90%;
+    }
+    .catering-content p {
+        font-size: 12px;
+    }
+    .catering-btn {
+        padding: 12px 40px;
+        font-size: 14px;
+    }
+
+    .name-inputs {
+        flex-direction: column; 
+        gap: 15px;
+    }
+}
