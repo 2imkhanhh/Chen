@@ -240,45 +240,122 @@
     margin: 0 auto;
 }
 
-/* --- RESPONSIVE CHO ĐIỆN THOẠI & TABLET --- */
-@media (max-width: 768px) {
-    .category-list {
-        justify-content: flex-start; /* Nếu màn hình nhỏ thì dồn sang trái để người dùng biết mà vuốt ngang */
-        padding: 0 10px;
+@media (max-width: 1024px) and (min-width: 769px) {
+    .menu-categories-nav {
+        margin-top: 30px;
     }
-    
+
     .category-item a {
-        padding: 12px 15px; /* Bóp khoảng cách lại một chút trên mobile */
+        padding: 12px 15px;
     }
-    
+
     .category-item .vi {
-        font-size: 14px;
+        font-size: 13px;
     }
-    
+
     .category-item .en {
-        font-size: 12px;
+        font-size: 11px;
+    }
+
+    .menu-list-section {
+        padding: 40px 30px;
     }
 
     .menu-grid {
-        grid-template-columns: 1fr; /* Trở về 1 cột trên điện thoại */
-        gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
     }
-    
-    .menu-title-vi {
-        font-size: 24px;
-    }
-    
-    .menu-title-en {
-        font-size: 28px;
+
+    .item-img {
+        width: 100%;
+        height: 220px;
     }
 
     .disclaimer-legend {
         gap: 15px;
         font-size: 14px;
     }
-    
-    .disclaimer-text {
+}
+
+@media (max-width: 768px) {
+    /* --- CATEGORY NAV --- */
+    .menu-categories-nav {
+        margin-top: 20px;
+    }
+
+    .category-item a {
+        padding: 10px 14px;
+    }
+
+    .category-item .vi {
+        font-size: 12px;
+    }
+
+    .category-item .en {
+        font-size: 10px;
+    }
+
+    /* --- MENU SECTION --- */
+    .menu-list-section {
+        padding: 30px 20px 40px 20px;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .menu-title-vi {
+        font-size: 22px;
+    }
+
+    .menu-title-en {
+        font-size: 26px;
+    }
+
+    /* 1 cột trên mobile */
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* Ảnh full width */
+    .item-img {
+        width: 100%;
+        height: 220px;
+        border-radius: 8px;
+    }
+
+    .item-name-vi {
+        font-size: 14px;
+    }
+
+    .item-name-en {
+        font-size: 13px;
+    }
+
+    .item-desc {
         font-size: 11px;
+    }
+
+    .item-price {
+        font-size: 16px;
+    }
+
+    /* --- DISCLAIMER --- */
+    .menu-disclaimer-section {
+        padding: 20px 20px 50px 20px;
+    }
+
+    .disclaimer-legend {
+        gap: 10px;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .disclaimer-text {
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        line-height: 2;
     }
 }
 
