@@ -4,17 +4,15 @@
     text-align: center;
 }
 
-/* Tiêu đề Grunge màu vàng */
 .catering-title {
     font-family: 'Rubik Dirt', system-ui;
     color: #F0AD00;
     font-size: 36px;
     font-weight: 400;
-    letter-spacing: 6px; /* Giãn cách chữ rộng ra giống thiết kế */
+    letter-spacing: 6px; 
     margin-bottom: 40px;
 }
 
-/* Khung chứa ảnh */
 .catering-image {
     width: 30%; 
     margin: 0 auto 50px auto; 
@@ -42,7 +40,6 @@
     margin-bottom: 15px;
 }
 
-/* Link tải menu gạch chân */
 .download-link {
     color: #2C5217; 
     text-decoration: underline;
@@ -53,15 +50,14 @@
     color: #FCBE20; 
 }
 
-/* Nút bấm */
 .catering-action {
     margin-top: 40px;
 }
 
 .catering-btn {
     display: inline-block;
-    background-color: #F8C301; /* Vàng cam */
-    color: #007B52; /* Xanh lá đậm */
+    background-color: #F8C301; 
+    color: #007B52; 
     font-family: 'Anybody', sans-serif;
     font-weight: 800;
     font-size: 16px;
@@ -72,21 +68,20 @@
 
 .catering-btn:hover {
     background-color: #F0AD00;
-    transform: translateY(-3px); /* Hiệu ứng nảy lên */
+    transform: translateY(-3px); 
     box-shadow: 0 5px 15px rgba(240, 173, 0, 0.4);
 }
 
 .catering-form-container {
     max-width: 750px;
-    margin: 80px auto 0; /* Cách phần nút Menu ở trên 80px */
-    text-align: left; /* Ép toàn bộ chữ trong form căn lề trái */
+    margin: 80px auto 0; 
+    text-align: left; 
 }
 
 .form-group {
     margin-bottom: 30px;
 }
 
-/* Các tiêu đề chính của trường nhập liệu */
 .main-label {
     display: block;
     font-family: 'Anybody', sans-serif;
@@ -102,7 +97,6 @@
     margin-left: 5px;
 }
 
-/* Chữ mô tả phụ và nhãn phụ */
 .field-desc, .sub-label {
     font-family: 'Anybody', sans-serif;
     color: #5c6a55;
@@ -111,17 +105,15 @@
     display: block;
 }
 
-/* Chia đôi cột cho tên */
 .name-inputs {
     display: flex;
-    gap: 20px; /* Khoảng cách giữa First name và Last name */
+    gap: 20px; 
 }
 
 .input-wrapper {
-    flex: 1; /* Mỗi ô chia đều 50% */
+    flex: 1; 
 }
 
-/* --- ĐỊNH DẠNG Ô NHẬP LIỆU CHUNG --- */
 .catering-form input[type="text"],
 .catering-form input[type="email"],
 .catering-form input[type="tel"],
@@ -130,8 +122,8 @@
 .catering-form textarea {
     width: 100%;
     padding: 12px 15px;
-    border: 1px solid #A3B899; /* Viền màu xanh lá nhạt giống thiết kế */
-    background-color: #ffffff; /* Nền trắng */
+    border: 1px solid #A3B899; 
+    background-color: #ffffff; 
     font-family: 'Anybody', sans-serif;
     font-size: 14px;
     color: #2C5217;
@@ -140,15 +132,14 @@
     transition: border-color 0.3s;
 }
 
-/* Hiệu ứng khi bấm vào ô nhập liệu */
 .catering-form input:focus,
 .catering-form select:focus,
 .catering-form textarea:focus {
-    border-color: #007B52; /* Viền đậm lên khi đang gõ */
+    border-color: #007B52; 
 }
 
 .catering-form textarea {
-    resize: vertical; /* Chỉ cho phép kéo giãn chiều dọc */
+    resize: vertical; 
 }
 
 .catering-form input::placeholder,
@@ -156,10 +147,9 @@
     color: #a8bba7;
 }
 
-/* --- NÚT BẤM SUBMIT --- */
 .form-submit-left {
     margin-top: 40px;
-    text-align: left; /* Canh nút bấm sang trái */
+    text-align: left; 
 }
 
 .submit-btn {
@@ -180,7 +170,6 @@
     box-shadow: 0 5px 15px rgba(240, 173, 0, 0.4);
 }
 
-/* --- RESPONSIVE CHO MÀN HÌNH NHỎ --- */
 @media (max-width: 768px) {
     .catering-section {
         padding: 20px;

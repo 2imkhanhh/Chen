@@ -1,0 +1,140 @@
+.booking-title {
+    font-family: 'Rubik Dirt', system-ui;
+    color: #F0AD00; 
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 6px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.booking-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.booking-tel {
+    font-family: 'Anybody', sans-serif;
+    color: #2C5217; 
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.booking-tel .label {
+    font-weight:5600;
+    margin-right: 10px; 
+}
+
+.booking-tel .number {
+    font-weight: 500;
+}
+
+.booking-address, 
+.booking-email {
+    font-family: 'Anybody', sans-serif;
+    color: #2C5217;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.online-ordering-section {
+    width: 100%;
+    text-align: center;
+    padding: 20px 20px 0 20px; 
+}
+
+.ordering-title {
+    font-family: 'Rubik Dirt', system-ui;
+    color: #F0AD00; 
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 6px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.delivery-partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+    padding-bottom: 60px;
+    flex-wrap: wrap; 
+}
+
+.partner-link {
+    display: inline-block;
+}
+
+.partner-link img {
+    width: 85px; 
+    height: 85px;
+    object-fit: contain; 
+    transition: transform 0.3s ease; 
+}
+
+.partner-link:hover img {
+    transform: scale(1.1);
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .booking-title {
+        font-size: 28px;
+        letter-spacing: 4px;
+    }
+
+    .ordering-title {
+        font-size: 28px;
+        letter-spacing: 4px;
+    }
+
+    .partner-link img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .delivery-partners {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 20px 20px 0 20px;
+        text-align: center;
+    }
+
+    .booking-title {
+        font-size: 22px;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+    }
+
+    .booking-tel {
+        font-size: 16px;
+    }
+
+    .booking-address,
+    .booking-email {
+        font-size: 13px;
+    }
+
+    .ordering-title {
+        font-size: 20px;
+        letter-spacing: 3px;
+        margin-bottom: 25px;
+    }
+
+    .delivery-partners {
+        gap: 20px;
+        padding-bottom: 0;
+    }
+
+    .partner-link img {
+        width: 65px;
+        height: 65px;
+    }
+}
