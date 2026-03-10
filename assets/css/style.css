@@ -87,13 +87,12 @@ body {
 }
 
 .hero-section {
-    position: relative; /* Cần thiết để chứa ảnh watermark absolute */
+    position: relative; 
     text-align: center;
     padding: 60px 20px;
     overflow: hidden; 
 }
 
-/* Các CSS khác của hero (quote, subtitle, hero-image) giữ nguyên như cũ */
 .quote {
     font-family: 'Rubik Dirt', system-ui;
     color: #F0AD00;
@@ -147,7 +146,7 @@ body {
     width: 100%;
     margin-bottom: 50px;
     position: relative;
-    overflow: hidden; /* Che đi những ảnh bị tràn ra ngoài màn hình */
+    overflow: hidden; 
 }
 
 .slider-container {
@@ -158,41 +157,36 @@ body {
     align-items: center;
 }
 
-/* Thanh ray chứa các ảnh */
 .slider-track {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* Hiệu ứng lướt mượt mà */
+    transition: transform 0.5s ease-in-out; 
     width: 100%;
 }
 
-/* Từng khung ảnh nhỏ */
 .slide {
-    /* Mặc định hiển thị 3 ảnh trên 1 dòng (100% / 3 = 33.333%) */
     min-width: 33.333%; 
     box-sizing: border-box;
-    /* Khoảng trống giữa các ảnh, nếu muốn các ảnh dính liền nhau như trong hình thì để padding: 0 */
     padding: 0 5px; 
 }
 
 .slide img {
     width: 100%;
-    height: 100%; /* Cố định chiều cao để các ảnh đều nhau */
-    object-fit: cover; /* Đảm bảo ảnh không bị méo, cắt cúp gọn gàng vào khung */
-    border-radius: 8px; /* Tùy chọn: bo góc ảnh một chút cho mềm mại */
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 8px; 
     display: block;
 }
 
-/* --- NÚT BẤM CHUYỂN ẢNH XANH LÁ --- */
 .slider-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #004d2e; /* Màu xanh lá đậm giống thiết kế */
-    color: #F0AD00; /* Mũi tên màu vàng */
+    background-color: #004d2e; 
+    color: #F0AD00; 
     border: none;
     width: 50px;
     height: 50px;
-    border-radius: 50%; /* Nút hình tròn */
+    border-radius: 50%; 
     font-size: 20px;
     cursor: pointer;
     z-index: 10;
@@ -206,15 +200,15 @@ body {
 
 .slider-btn:hover {
     opacity: 1;
-    background-color: #007B52; /* Sáng lên một chút khi di chuột vào */
+    background-color: #007B52;
 }
 
 .prev-btn {
-    left: 10px; /* Đặt nút trái cách lề 20px */
+    left: 10px; 
 }
 
 .next-btn {
-    right: 10px; /* Đặt nút phải cách lề 20px */
+    right: 10px; 
 }
 
 .about-us-section {
@@ -257,7 +251,6 @@ body {
     position: relative;
 }
 
-/* Đã xóa filter: grayscale(100%); và renaming class */
 .faded-img {
     max-width: 80%;
     width: 100%;
@@ -322,13 +315,12 @@ body {
     max-width: 90%;
     display: flex;
     align-items: center;
-    padding: 0 120px; /* Chuyển khoảng trống chứa nút ra đây */
+    padding: 0 120px; 
 }
 
 .reviews-viewport {
     overflow: hidden; 
     width: 100%;
-    /* Đã xóa padding: 0 50px; ở đây để không làm sai lệch tính toán JS */
 }
 
 .reviews-track {
@@ -341,37 +333,30 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center; /* Gom cả khối ảnh và chữ vào giữa màn hình */
-    
-    /* 👇 ĐIỀU CHỈNH KHOẢNG CÁCH BẰNG PX Ở ĐÂY 👇 */
-    gap: 80px; /* Tăng số này lên nếu muốn ảnh và chữ xa nhau hơn */
-    
+    justify-content: center; 
+    gap: 80px; 
     box-sizing: border-box;
 }
 
-/* Phần ảnh bên trái */
 .review-image {
-    /* Đã xóa flex: 1 và các lệnh đẩy phải ở đây để nó không tự động phình to nữa */
     display: block; 
 }
 
 .review-image img {
-    /* 👇 ĐIỀU CHỈNH ĐỘ TO CỦA ẢNH BẰNG PX Ở ĐÂY 👇 */
     width: 380px; 
-    height: 380px; /* Đặt chiều cao bằng chiều rộng để ảnh luôn vuông */
+    height: 380px; 
     object-fit: cover;
     display: block;
 }
 
-/* Phần chữ bên phải */
 .review-content {
-    flex: 1; /* Vẫn cho phần chữ co giãn chiếm nốt khoảng trống */
-    max-width: 500px; /* KHÓA độ rộng của khối chữ lại để chữ không bị kéo dài ngoằng sang mép phải */
+    flex: 1; 
+    max-width: 500px; 
     text-align: left; 
 }
 .client-name {
     font-family: 'Anybody', sans-serif;
-    color: #007B52; /* Xanh lá đậm */
+    color: #007B52; 
     font-size: 28px;
     font-weight: 800;
     margin-top: 10px
@@ -418,13 +403,12 @@ body {
     font-weight: 800;
 }
 
-/* --- NÚT BẤM REVIEW --- */
 .review-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #008f5d; /* Nền xanh lá */
-    color: #F0AD00; /* Mũi tên vàng */
+    background-color: #008f5d; 
+    color: #F0AD00; 
     border: none;
     width: 45px;
     height: 45px;
@@ -440,7 +424,7 @@ body {
 
 .review-btn:hover {
     background-color: #007B52;
-    transform: translateY(-50%) scale(1.1); /* Nảy to lên chút khi hover */
+    transform: translateY(-50%) scale(1.1); 
 }
 
 .review-prev-btn {
@@ -481,11 +465,10 @@ body {
 
 .contact-container {
     display: flex;
-    align-items: stretch; /* Đảm bảo 2 bên cao bằng nhau */
+    align-items: stretch; 
     width: 100%;
 }
 
-/* Bên trái: Form */
 .contact-form-side {
     flex: 1;
     padding: 50px 5% 20px 10%; 
@@ -510,7 +493,6 @@ body {
     max-width: 500px;
 }
 
-/* Form Layout */
 .contact-form {
     max-width: 600px;
 }
@@ -550,10 +532,9 @@ body {
     min-height: 45px;
 }
 
-/* Nút Send */
 .form-submit {
     display: flex;
-    justify-content: flex-end; /* Đẩy nút sang phải theo thiết kế */
+    justify-content: flex-end; 
     margin-top: 10px;
 }
 
@@ -574,7 +555,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* Bên phải: Ảnh tràn lề */
 .contact-image-side {
     flex: 1;
 }
@@ -606,7 +586,6 @@ body {
     flex: 1;
 }
 
-/* Cột 1: Logo & Social */
 .footer-logo {
     width: 150px;
 }
@@ -622,7 +601,6 @@ body {
     height: 32px;
 }
 
-/* Tiêu đề chung */
 .footer-heading {
     color: #FCBE20;
     font-size: 18px;
@@ -631,7 +609,6 @@ body {
     text-transform: none;
 }
 
-/* Cột 2: Info */
 .info-item {
     display: flex;
     margin-bottom: 15px;
@@ -646,7 +623,6 @@ body {
     flex-shrink: 0;
 }
 
-/* Cột 3: Hours */
 .hour-item {
     margin-bottom: 20px;
     font-size: 14px;
@@ -659,12 +635,11 @@ body {
 .footer-column.footer-map {
     flex: 1.5; 
     display: flex;
-    align-items: stretch; /* Đảm bảo cột map luôn giãn hết chiều cao hàng */
+    align-items: stretch; 
 }
 
 .map-container {
     width: 100%;
-    /* Bạn có thể tăng số 400px này lên nữa nếu muốn cao hơn nữa */
     min-height: 250px; 
     height: 100%; 
     overflow: hidden;
@@ -677,17 +652,16 @@ body {
     display: block;
 }
 
-/* Copyright */
 .footer-bottom {
-    max-width: 80%; /* Bằng với max-width của footer-container */
-    margin: 60px auto 0 auto; /* Căn giữa để khớp với phần trên */
-    border-top: 1px solid #FFFCF6; /* Đường kẻ trắng/vàng nhạt */
-    padding: 20px 20px 0 20px; /* Padding để text không dính lề */
+    max-width: 80%; 
+    margin: 60px auto 0 auto; 
+    border-top: 1px solid #FFFCF6;
+    padding: 20px 20px 0 20px; 
     text-align: center;
 }
 
 .footer-bottom p {
-    font-family: 'Poppins', sans-serif; /* Đổi sang font Poppins */
+    font-family: 'Poppins', sans-serif; 
     font-size: 12px;
     color: #FFFFFF;
     letter-spacing: 0.5px;
@@ -718,9 +692,6 @@ body {
     flex-shrink: 0; 
 }
 
-/* ==========================================
-   MOBILE MENU OVERLAY
-   ========================================== */
 .mobile-menu-overlay {
     position: fixed;
     top: 0;
@@ -734,7 +705,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     padding: 100px 50px 60px 50px;
-    overflow-y: auto; /* cho phép scroll bên trong menu nếu nội dung dài */
+    overflow-y: auto; 
     opacity: 0;
     visibility: hidden;
     transform: translateX(100%);
@@ -790,34 +761,28 @@ body {
 }
 
 @media (max-width: 768px) {
-    /* Ẩn nav links desktop */
     .nav-links {
         display: none;
     }
 
-    /* Hiện hamburger */
     .hamburger-btn {
         display: flex;
     }
 
-    /* Navbar mobile: logo trái, hamburger phải */
     .navbar {
         justify-content: space-between;
         padding: 0 20px;
     }
 
-    /* Đẩy logo về góc trái bằng cách reset flex */
     .logo {
-        order: -1;  /* Logo luôn đứng đầu */
-        flex: 0;    /* Không cho logo giãn ra */
+        order: -1;  
+        flex: 0;   
     }
 
-    /* Hamburger đứng cuối */
     .hamburger-btn {
         order: 1;
     }
 
-    /* Logo nhỏ hơn trên mobile */
     .logo img {
         height: 60px;
     }
@@ -830,7 +795,6 @@ body {
         padding-top: 80px;
     }
 
-    /* --- HERO SECTION --- */
     .hero-section {
         padding: 30px 15px;
     }
@@ -854,9 +818,8 @@ body {
         top: 65%;
     }
 
-    /* --- FOOD SLIDER --- */
     .slide {
-        min-width: 50%; /* 2 ảnh thay vì 3 */
+        min-width: 50%; 
     }
 
     .slider-btn{
@@ -869,7 +832,6 @@ body {
         margin-bottom: 30px;
     }
 
-    /* --- ABOUT US SECTION --- */
     .about-us-section {
         padding: 20px 20px 60px 20px;
     }
@@ -901,7 +863,6 @@ body {
         padding: 12px 35px;
     }
 
-    /* --- CUSTOMER REVIEWS --- */
     .reviews-title {
         font-size: 20px;
         letter-spacing: 1px;
@@ -915,7 +876,7 @@ body {
     }
 
     .review-slide {
-        flex-direction: column; /* Stack ảnh lên trên, chữ xuống dưới */
+        flex-direction: column; 
         gap: 20px;
         padding: 0 10px 30px 10px;
         align-items: center;
@@ -953,7 +914,6 @@ body {
         margin-top: 0;
     }
 
-    /* --- CONTACT SECTION --- */
     .contact-container {
         flex-direction: column; 
     }
@@ -979,7 +939,6 @@ body {
         height: 250px;
     }
 
-    /* --- FOOTER --- */
     .footer-container {
         flex-direction: column;
         max-width: 100%;

@@ -510,24 +510,16 @@
             const menuSections = document.querySelectorAll('.menu-list-section');
             const indicator = document.querySelector('.active-indicator');
 
-            // Hàm di chuyển thanh trượt vàng
             const moveIndicator = (item) => {
                 if (!item || !indicator) return;
-
-                // Lấy thẻ <a> bên trong thẻ <li> để tính độ rộng cho chuẩn
                 const aTag = item.querySelector('a');
-
-                // Tính toán vị trí và độ rộng (trừ đi 50px là padding 2 bên (25px * 2) để thanh gạch chỉ dài bằng chữ)
                 const width = aTag.offsetWidth - 50;
-                const leftPosition = item.offsetLeft + 25; // Cộng 25px để thụt vào bằng với padding trái
+                const leftPosition = item.offsetLeft + 25; 
 
-                // Áp dụng CSS để thanh trượt chạy
                 indicator.style.width = `${width}px`;
                 indicator.style.transform = `translateX(${leftPosition}px)`;
             };
 
-            // Khởi tạo vị trí thanh trượt lần đầu tiên khi load trang
-            // Dùng setTimeout để đợi font chữ load xong thì tính toán kích thước mới chuẩn xác
             setTimeout(() => {
                 const initialActive = document.querySelector('.category-item.active');
                 if (initialActive) moveIndicator(initialActive);
@@ -538,15 +530,11 @@
 
                 link.addEventListener('click', function (e) {
                     e.preventDefault();
-
-                    // 1. Chuyển class active
                     navItems.forEach(nav => nav.classList.remove('active'));
                     item.classList.add('active');
 
-                    // 2. Di chuyển thanh trượt tới mục vừa click
                     moveIndicator(item);
 
-                    // 3. Ẩn/hiện danh mục món ăn tương ứng
                     const targetId = this.getAttribute('href').substring(1);
                     menuSections.forEach(section => {
                         if (section.id === targetId) {
@@ -555,13 +543,9 @@
                             section.classList.remove('active-section');
                         }
                     });
-
-                    // Cuộn menu ngang trên mobile
                     item.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
                 });
             });
-
-            // Cập nhật lại vị trí thanh trượt nếu người dùng thay đổi kích thước cửa sổ
             window.addEventListener('resize', () => {
                 const currentActive = document.querySelector('.category-item.active');
                 if (currentActive) moveIndicator(currentActive);

@@ -1,59 +1,53 @@
 .menu-categories-nav {
-    background-color: #007B52; /* Màu xanh lá thương hiệu */
+    background-color: #007B52; 
     width: 100%;
     margin-top: 50px;
-    
-    /* Thiết lập cho phép cuộn ngang trên màn hình nhỏ */
     overflow-x: auto; 
     white-space: nowrap; 
-    
-    /* Ẩn thanh cuộn (scrollbar) cho gọn gàng nhưng vẫn vuốt được */
-    -ms-overflow-style: none;  /* Cho IE and Edge */
-    scrollbar-width: none;  /* Cho Firefox */
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
 }
 
 .menu-categories-nav::-webkit-scrollbar {
-    display: none; /* Ẩn thanh cuộn cho Chrome, Safari và Opera */
+    display: none; 
 }
 
 .category-list {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: max-content; /* Ép nền xanh kéo dài ra hết kể cả khi cuộn */
+    min-width: max-content; 
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .category-item {
-    position: relative; /* Để định vị thanh gạch dưới cho class active */
+    position: relative; 
 }
 
 .category-item a {
     display: flex;
-    flex-direction: column; /* Xếp tiếng Việt ở trên, tiếng Anh ở dưới */
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
     color: #ffffff;
     text-decoration: none;
-    padding: 15px 20px; /* Điều chỉnh khoảng cách giữa các mục */
+    padding: 15px 20px; 
     font-family: 'Anybody', sans-serif;
     transition: color 0.3s ease;
 }
 
 .category-item a:hover {
-    color: #F8C301; /* Chữ chuyển màu vàng khi lướt chuột qua */
+    color: #F8C301; 
 }
 
-/* Kiểu chữ Tiếng Việt */
 .category-item .vi {
     font-size: 15px;
     font-weight: 600;
-    margin-bottom: 5px; /* Tạo khoảng hở nhỏ giữa 2 dòng */
+    margin-bottom: 5px; 
 }
 
-/* Kiểu chữ Tiếng Anh */
 .category-item .en {
     font-size: 13px;
     font-weight: 400;
@@ -67,23 +61,20 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    position: relative; /* Rất quan trọng: làm gốc tọa độ cho thanh trượt chạy */
+    position: relative; 
 }
 
-/* 👇 THÊM CSS MỚI CHO THANH TRƯỢT 👇 */
 .active-indicator {
     position: absolute;
     bottom: 0;
     left: 0;
     height: 4px;
-    background-color: #F8C301; /* Màu vàng cam */
-    /* Hiệu ứng trượt ngang và tự động co giãn độ rộng cho vừa với chữ */
+    background-color: #F8C301;
     transition: transform 0.3s ease-in-out, width 0.3s ease-in-out; 
     z-index: 10;
-    pointer-events: none; /* Tránh việc bấm nhầm vào thanh trượt */
+    pointer-events: none; 
 }
 
-/* Để chữ của mục đang chọn giữ màu trắng (không bị hiệu ứng hover đè lên) */
 .category-item.active a {
     color: #ffffff;
 }
@@ -100,7 +91,6 @@
     display: block;
 }
 
-/* Tiêu đề phân mục */
 .section-heading {
     text-align: center;
     margin-bottom: 50px;
@@ -108,7 +98,7 @@
 
 .menu-title-vi {
     font-family: 'Anybody', sans-serif;
-    color: #F8C301; /* Vàng cam */
+    color: #F8C301; 
     font-size: 28px;
     font-weight: 800;
     text-transform: uppercase;
@@ -117,40 +107,36 @@
 
 .menu-title-en {
     font-family: 'La Belle Aurore', cursive;
-    color: #007B52; /* Xanh lá */
+    color: #007B52; 
     font-size: 32px;
     font-weight: 400;
     margin-top: 5px;
 }
 
-/* Bố cục Lưới (Grid) 2 cột */
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Đổi số 2 thành số 3 ở đây */
-    gap: 40px; /* Giảm gap một chút từ 50px xuống 40px cho đỡ trống */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px; 
 }
 
-/* Card Món Ăn */
 .menu-item {
     display: flex;
     flex-direction: column;
 }
 
-/* Xử lý hình ảnh */
 .item-img {
     width: 450px;
-    height: 290px; /* Cố định chiều cao ảnh */
-    object-fit: cover; /* Cắt gọn ảnh vào khung */
-    border-radius: 12px; /* Bo góc mượt mà */
+    height: 290px;
+    object-fit: cover;
+    border-radius: 12px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Đổ bóng nhẹ cho sinh động */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
 }
 
-/* Thông tin món ăn */
 .item-info {
     display: flex;
     flex-direction: column;
-    flex: 1; /* Để phần này tự đẩy phần giá tiền xuống dưới cùng */
+    flex: 1; 
 }
 
 .item-name-vi {
@@ -167,32 +153,31 @@
     color: #2C5217;
     font-size: 15px;
     font-weight: 600;
-    font-style: italic; /* In nghiêng tiếng Anh */
+    font-style: italic;
     margin-bottom: 12px;
     line-height: 1.4;
 }
 
 .item-desc {
     font-family: 'Anybody', sans-serif;
-    color: #5c6a53; /* Xanh rêu nhạt */
+    color: #5c6a53; 
     font-size: 11px;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
-/* Phần Giá Tiền và Đường Kẻ Vàng */
 .item-price-row {
     display: flex;
-    align-items: flex-end; /* Căn thẳng hàng đáy */
-    margin-top: auto; /* Tự động đẩy cụm này xuống sát lề dưới của card */
+    align-items: flex-end; 
+    margin-top: auto; 
 }
 
 .price-line {
-    flex-grow: 1; /* Chiếm hết khoảng trống còn lại */
+    flex-grow: 1; 
     height: 1px;
-    background-color: #F8C301; /* Đường kẻ ngang màu vàng */
+    background-color: #F8C301; 
     margin-right: 15px;
-    margin-bottom: 6px; /* Nhích đường kẻ lên cho cân xứng với số tiền */
+    margin-bottom: 6px; 
 }
 
 .item-price {
@@ -214,7 +199,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Cho phép rớt dòng trên màn hình điện thoại nhỏ */
+    flex-wrap: wrap; 
     gap: 30px;
     margin-bottom: 30px;
     font-family: 'Anybody', sans-serif;
@@ -278,7 +263,6 @@
 }
 
 @media (max-width: 768px) {
-    /* --- CATEGORY NAV --- */
     .menu-categories-nav {
         margin-top: 20px;
     }
@@ -295,7 +279,6 @@
         font-size: 10px;
     }
 
-    /* --- MENU SECTION --- */
     .menu-list-section {
         padding: 30px 20px 40px 20px;
     }
@@ -312,13 +295,11 @@
         font-size: 26px;
     }
 
-    /* 1 cột trên mobile */
     .menu-grid {
         grid-template-columns: 1fr;
         gap: 30px;
     }
 
-    /* Ảnh full width */
     .item-img {
         width: 100%;
         height: 220px;
@@ -341,7 +322,6 @@
         font-size: 16px;
     }
 
-    /* --- DISCLAIMER --- */
     .menu-disclaimer-section {
         padding: 20px 20px 50px 20px;
     }

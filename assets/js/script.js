@@ -15,7 +15,7 @@ const mobileMenuClose = document.getElementById('mobileMenuClose');
 if (hamburgerBtn && mobileMenuOverlay) {
     hamburgerBtn.addEventListener('click', () => {
         mobileMenuOverlay.classList.add('open');
-        document.body.style.overflow = 'hidden'; // Chặn scroll khi menu mở
+        document.body.style.overflow = 'hidden'; 
     });
 
     mobileMenuClose.addEventListener('click', () => {
@@ -23,7 +23,6 @@ if (hamburgerBtn && mobileMenuOverlay) {
         document.body.style.overflow = '';
     });
 
-    // Nhấn vào link thì đóng menu
     mobileMenuOverlay.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             mobileMenuOverlay.classList.remove('open');
